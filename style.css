@@ -1,0 +1,83 @@
+/* Resetting default margins, padding, and setting box-sizing to border-box for consistent element sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the body to make it full screen and center the calculator */
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Background with a diagonal gradient from dark to lighter color */
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+/* Main calculator container styling */
+.calculator {
+    width: 320px;
+    padding: 20px;
+    background-color: #222; /* Dark background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    /* Shadow effect around the calculator */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Display screen styling */
+.display {
+    width: 100%;
+    height: 50px; /* Fixed height for display */
+    background-color: #333; /* Slightly lighter dark color */
+    color: white; /* White text color for visibility */
+    font-size: 24px; /* Larger font for easy reading */
+    text-align: right; /* Aligning text to the right */
+    border: none; /* Removing default border */
+    border-radius: 5px; /* Rounded corners */
+    padding-right: 10px; /* Padding on the right for spacing */
+    margin-bottom: 10px; /* Spacing below display */
+}
+
+/* Grid layout for calculator buttons */
+.buttons {
+    display: grid;
+    /* Four equal-width columns for buttons */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Spacing between buttons */
+}
+
+/* General button styling */
+button {
+    width: 100%; /* Full width of grid cell */
+    height: 50px; /* Fixed height */
+    font-size: 18px; /* Font size for readability */
+    color: white; /* White text */
+    background-color: #555; /* Default button background color */
+    border: none; /* Removing default border */
+    border-radius: 50%; /* Circular buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    /* Smooth color transition on hover */
+    transition: background-color 0.2s;
+}
+
+/* Button color change on hover */
+button:hover {
+    background-color: #777; /* Slightly lighter background */
+}
+
+/* Button color change on click */
+button:active {
+    background-color: #999; /* Even lighter background */
+}
+
+/* Styling for the equal (=) button */
+.equalBtn {
+    background-color: #fb7c14; /* Bright color for emphasis */
+}
+
+/* Styling for operator buttons (e.g., +, -, *, /) */
+.op {
+    color: #6dee0a; /* Green color for differentiation */
+}
